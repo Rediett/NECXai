@@ -20,15 +20,14 @@ async function getans(p) {
     document.getElementById("prompt").disabled = false;
     document.getElementById("sendbtn").disabled = false;
     fdata = fdata.replace(/(\r\n|\n|\r)/gm, "");
-    console.log(fdata);
     try {
         var services = fdata.split("ServiceSuggest: ")[1];
         var lserv = services.split(",");
         if (lserv.length > 0) {
             document.getElementById("sliderArrow").hidden = false;
             lserv.forEach((item, index) => {
-                if (!sugServices.includes(item)) {
-                    sugServices.push(item);
+                if (!sugServices.includes(item.toLowerCase())) {
+                    sugServices.push(item.toLowerCase());
                     showServices(item);
                 }
             })
