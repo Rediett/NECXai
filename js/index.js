@@ -8,7 +8,7 @@ if(window.innerWidth <= 500) {
 
 var prompts = "";
 
-addchat("Hey, how may I help you? Can you briefly describe your situation for me please? (where and how it happend)", false);
+addchat("Hey, how may I help you? Can you briefly describe your situation for me please? (where and how it happened)", false);
 var sugServices = [];
 async function getans(p) {
     // reload();
